@@ -7,8 +7,8 @@ FROM microsoft/dotnet:2.2-sdk AS build
 WORKDIR /src
 COPY ["newdocker.csproj", "newdocker/"]
 RUN dotnet restore "newdocker/newdocker.csproj"
-COPY . ./
 WORKDIR "/src/newdocker"
+COPY . .
 RUN dotnet build "newdocker.csproj" -c Release -o /app
 
 FROM build AS publish
