@@ -12,7 +12,7 @@ namespace newdocker.Controllers
 	{
 		public IActionResult Index()
 		{
-			return View();
+			return Content($"dotnet2docker , {DateTime.Now} , verson 1 , by foxbaby");
 		}
 
 		public IActionResult Privacy()
